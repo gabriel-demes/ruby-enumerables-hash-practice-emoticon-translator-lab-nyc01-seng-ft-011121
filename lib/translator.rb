@@ -1,13 +1,39 @@
 # require modules here
+require "yaml"
 
-def load_library
+def load_library(file)
   # code goes here
+  emoticons = YAML.load_file(file)
+  usable_emoticons = {}
+  #add keys to new hash
+  emoticons.each do |x,y|
+    usable_emoticons[x.to_sym] = {english: emoticons[x][y][0],
+      japanese: emoticons[x][y][1]}
+  usable_emoticons
+
+  end
+
+
+
+
 end
 
-def get_japanese_emoticon
-  # code goes here
+def get_japanese_emoticon (file, emoji)
+  dictionary = load_library(file)
+  dictionary.each do |x,y|
+    if dictionary[x][:english] == emoji
+      return dictionary[x][:japanese]
+    end
+  end
+
 end
 
-def get_english_meaning
+def get_english_meaning(file, emoji)
   # code goes here
+  dictionary = load_library(file)
+  dictionary.each do |x,y|
+    if dictionary[x][:japanese] == emoji
+      return x
+    end
+  end
 end
