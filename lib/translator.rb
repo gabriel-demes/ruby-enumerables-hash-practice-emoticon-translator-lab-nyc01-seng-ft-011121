@@ -20,8 +20,8 @@ def load_library(file)
         japanese: emoticon[x][y][2]
     end
   end
-      
-  #puts usable_emoticons
+
+  puts usable_emoticons
 
   """usable_emoticons.each do |x,y|
     x = {
