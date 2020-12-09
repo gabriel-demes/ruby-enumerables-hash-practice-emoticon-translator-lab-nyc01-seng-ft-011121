@@ -9,18 +9,19 @@ def load_library(file)
   usable_emoticons = {}
   #add keys to new hash
   emoticons.each do |x,y|
-    usable_emoticons[x.to_sym] = {}
+    usable_emoticons[x] = {}
   end
   #puts usable_emoticons
 
   emoticons.each do |x,y|
-    usable_emoticons.each do |t,u|
-      usable_emoticons[t] = {
-        english: emoticons[x][y][0] ,
-        japanese: emoticons[x][y][1] }
+    if usable_emoticons.key?(x)
+      usable_emoticons[x]: {
+        enlgish: emoticon[x][y][1],
+        japanese: emoticon[x][y][2]
     end
   end
-  puts usable_emoticons
+      
+  #puts usable_emoticons
 
   """usable_emoticons.each do |x,y|
     x = {
