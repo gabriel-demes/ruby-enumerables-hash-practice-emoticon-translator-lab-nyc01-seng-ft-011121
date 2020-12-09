@@ -12,7 +12,7 @@ def load_library(file)
 
   emoticons.each do |x,y|
     usable_emoticons.each do |t,u|
-      usable_emoticons[t] => {
+      usable_emoticons[t] = {
         english: emoticons[x][y][0],
         japanese: emoticons[x][y][1]}
     end
