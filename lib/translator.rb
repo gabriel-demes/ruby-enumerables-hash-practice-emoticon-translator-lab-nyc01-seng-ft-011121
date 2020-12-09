@@ -22,8 +22,8 @@ def load_library(file)
     x = {
       english: "",
       japanese: ""
-    }"""
-  end
+    }
+  end"""
 
   usable_emoticons
 
