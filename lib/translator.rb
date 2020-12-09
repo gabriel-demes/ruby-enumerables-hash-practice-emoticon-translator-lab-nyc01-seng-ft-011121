@@ -4,13 +4,14 @@ require "yaml"
 def load_library(file)
   # code goes here
   emoticons = YAML.load_file(file)
-  puts emoticons
+  #puts emoticons
 
   usable_emoticons = {}
   #add keys to new hash
   emoticons.each do |x,y|
     usable_emoticons[x.to_sym] = {}
   end
+  puts usable_emoticons
 
   emoticons.each do |x,y|
     usable_emoticons.each do |t,u|
