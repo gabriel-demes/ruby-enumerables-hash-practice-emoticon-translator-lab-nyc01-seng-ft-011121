@@ -15,7 +15,7 @@ def load_library(file)
 
   emoticons.each do |x,y|
     if usable_emoticons.key?(x)
-      usable_emoticons[x] => {
+      usable_emoticons[x] = {
         enlgish: emoticon[x][y][1],
         japanese: emoticon[x][y][2]
     end
