@@ -17,14 +17,14 @@ def load_library(file)
         japanese: emoticons[x][y][1]}
     end
   end
-  
+
   """usable_emoticons.each do |x,y|
     x = {
       english: "",
       japanese: ""
     }"""
   end
-  
+
   usable_emoticons
 
   end
